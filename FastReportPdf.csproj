@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastReport.Net.Demo" Version="2022.3.9" />
+  </ItemGroup>
+
+  <!--
+  <ItemGroup>
+    <Reference Include="FastReport">
+      <HintPath>fromNuget\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Compat">
+      <HintPath>fromNuget\FastReport.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>fromNuget\System.Drawing.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  -->
+</Project>

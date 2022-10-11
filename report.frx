@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/10/2022 11:00:49" ReportInfo.Modified="10/11/2022 07:54:19" ReportInfo.CreatorVersion="2022.3.9.0">
+  <Styles Name="Standard">
+    <Style Name="Title" Font="Arial, 12pt, style=Bold"/>
+    <Style Name="Header" Font="Arial, 10pt, style=Bold"/>
+    <Style Name="Group" Font="Arial, 10pt, style=Bold"/>
+    <Style Name="Data" Font="Arial, 10pt"/>
+    <Style Name="Footer" Font="Arial, 10pt"/>
+    <Style Name="EvenRows" Fill.Color="WhiteSmoke" Font="Arial, 10pt"/>
+  </Styles>
+  <Dictionary>
+    <XmlDataConnection Name="Connection" ConnectionString="rijcmlqL32bo2LFhrkZAj+wxVBxPTS2UyrT9wiPiVWEOb6OzUR3hgGrWlXN5EkRqbvMjNJmyxH5SKc7UhejiJTQIc1ntQ==">
+      <TableDataSource Name="Products" DataType="System.Int32" Enabled="true" TableName="Products">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Price" DataType="System.Decimal"/>
+        <Column Name="LastUpdated" DataType="System.DateTime"/>
+      </TableDataSource>
+    </XmlDataConnection>
+    <JsonDataSourceConnection Name="Connection1" ConnectionString="rijcmlqUQYDWoJH5fbqkkUHBlfrQM8QUAYuAaQP2DPyQ4h1CUQXInXxr1KR6nXNIAJtaaiXvN/t0/LGfYMuf3kKo14nLp0UXCQ1Hlf/4+2i8gxPfjLVUbAGQOzwuJnSRLkyBgQYtjQ4uVQltS3h1NdAv9/lnv7SuoLODJFU/r4iHdFClqiV8kRCXDY83fBRRL3w5IrzOKtraNnpNatRtdzk1CLtsCFha3CPaOrgnrCPClZgbDU7os8XyeNE5GOf8WuYquVbj0TyWqEiYpWo3VXit1wYjXspVwr89YLAYFQ6HOYAuUv4PPmQxedUwPZpxEiCI0vSego2xDwpV+HitCTOzti+yTuVQper8O+8RjWDWiJbJsJUvV4YGGigpnmVxlJG8VNKkEgs+QbFC4uypwYxyR5Mdmrw6TXqy9U5xMqe10SdT8+Gilb7ppOHYIqf3OGh1l3ZEhtu+Dh5BBb9wr53BmB0iJkauACFTgU4GvKvnJ2Fmvmk9B6uTAwcNLKaZfFVLpPLEJ+rszkJumQGjpXzG3bhF/Db3ZkNMz5EXBKZGi1s4J74Nrinbm8tlnTy74sI6n6qxao0gmnFLPxWZstorHQj4zB76nksLs1hM7BQ7f+YLsFDNcj+iUIV+nRY7ZOIGF248V5zBXGUwFP9nkrUw4Eggxhg0DYmvL6zGJAJ6gDY7T2SNFgLvhuJOIoTVPv0csK2b20Tr4vsevWtqFq9DgAu+cYM0/fUCy8EglDgx7BXCxrZs/GFRsE/BWXPvhZNnIoEs36+YClp4SxGzrwE1k/zOFu9EV+2IW1jx0ei9384/w/Mr7YbZCztoAt0ZLyN2KZxrXJL7p9WS7JYnSQWJAkXdokgA6dCz6DmHUQwlPV5LL/aek3zpMJzrFWRHQujnslZHwH1uc+Z6U3wL9+sK7w4cRgzZN+jlSJzehy0bm1fzuwANcbWFUiqiIOjIJPKHifq7mKxxMrWYkwFtQ334CGPkzue4vGJhNra6TO+jPGD8wnbd1fIp1o2JqAuVzRWG1K/iGC3XaDXsvOl4NoLZs4ZW1gzRPwmG5FjMThxkbPGPKwcS0QvIPKJ5dnvmayrAIB8pGlwyN1ojWa98qe//8p7YVPHkYMxE5H5nfhQe4GQm2TOUJbpTGfickXD9IJU8PPI7rtHgUYYvF1mlK72rNPnCxOkiyn8i9QpVoN7E/TQnSpT3d9yvnDQtyiy4miBWhtnvDhFgOhBMYPBiuApjPIcrkUU4mc8Lw/myLTxAQAVLnBw1N3ODbDbVLc4+3jMOiwd">
+      <JsonTableDataSource Name="JSON" DataType="FastReport.Data.JsonConnection.JsonParser.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <JsonTableDataSource Name="Customers" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="FastReport.JsonBase">
+              <Column Name="ID" DataType="System.Double"/>
+              <Column Name="Name" DataType="System.String"/>
+              <Column Name="Address" DataType="System.String"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </JsonTableDataSource>
+          <JsonTableDataSource Name="Invoices" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="FastReport.JsonBase">
+              <Column Name="CustomerID" DataType="System.Double"/>
+              <Column Name="ProductName" DataType="System.String"/>
+              <Column Name="Qty" DataType="System.Double"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </JsonTableDataSource>
+        </Column>
+        <Column Name="array" Enabled="false" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+    <JsonDataSourceConnection Name="Connection2" ConnectionString="rijcmlqbJsCNDUWD8zs7Fjc+Sa5CruP+Qb2rwx3JZQR7UgKMcmXZB9j+Whqy4z+NMO7pAgeMDUMvBOu9hFl6gMBNCw63l5FnwSMOmOF/EM7j0N2EL8bmdusieKbIbBudLsgTn+gpyAIroQTIVZalwKDi8RFGAEu5R+YllxyMl2XS2GucdmmaxKw82f/Y5JOOiSGjv9VDeZMnW0f2jIuVQlmdYsgxmSBa7xNlidGjzt5wPh5im9/45QPAjHBAZiSvFQuinMxS2/L+k+Gfovq5U8M7Jhsvd7Ji7Bqglsy7ekZs11NkyGZmROZgQEJosgXtR1VF/Vzi7sz5LZkjvE4i4Z6bRKJyzXmlGFRMMslh/2I4JSH0L/02zNL/T/GyHiAf6VCT4tGzRllcrbgYkD4hkncd0ih2F046GVK0alHK40HNUMVzGvt3s8Cs5yjBn1zz3ninnx6OITh7mfHCELjUxrVB8YViA==">
+      <JsonTableDataSource Name="JSON1" DataType="FastReport.Data.JsonConnection.JsonParser.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <Column Name="Title" DataType="System.String"/>
+          <Column Name="SourceFolder" DataType="System.String"/>
+          <Column Name="DestinationUrl" DataType="System.String"/>
+          <Column Name="Upload" DataType="System.Boolean" BindableControl="CheckBox"/>
+          <Column Name="Extract" DataType="System.Boolean" BindableControl="CheckBox"/>
+          <Column Name="WebSocketClientID" DataType="System.Object"/>
+        </Column>
+        <Column Name="array" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Width="718.2" Height="37.8" Dock="Fill" Text="Products Page" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" Style="Title"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text3" Width="245.7" Height="18.9" Text="Name" Font="Arial, 10pt, style=Bold" Style="Header"/>
+      <TextObject Name="Text5" Left="245.7" Width="236.25" Height="18.9" Text="Price" Font="Arial, 10pt, style=Bold" Style="Header"/>
+      <TextObject Name="Text7" Left="481.95" Width="236.25" Height="18.9" Text="LastUpdated" Font="Arial, 10pt, style=Bold" Style="Header"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="18.9" EvenStyle="EvenRows" DataSource="Products">
+      <TextObject Name="Text2" Width="245.7" Height="18.9" Text="[Products.Name]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text4" Left="245.7" Width="236.25" Height="18.9" Text="[Products.Price]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text6" Left="481.95" Width="236.25" Height="18.9" Text="[Products.LastUpdated]" Font="Arial, 10pt" Style="Data"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="97.05" Width="718.2" Height="18.9">
+      <TextObject Name="Text8" Width="718.2" Height="18.9" Dock="Fill" Text="[PageN]" HorzAlign="Right" Font="Arial, 10pt" Style="Footer"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Page2" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle2" Width="718.2" Height="37.8">
+      <TextObject Name="Text9" Left="141.75" Top="9.45" Width="94.5" Height="18.9" Text="testing lang ni" Font="Arial, 10pt"/>
+      <TextObject Name="Text10" Left="311.85" Top="9.45" Width="94.5" Height="18.9" Text="testing ra ni" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader2" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data2" Top="74.15" Width="718.2" Height="75.6"/>
+    <PageFooterBand Name="PageFooter2" Top="153.75" Width="718.2" Height="18.9"/>
+  </ReportPage>
+  <ReportPage Name="Page3" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle3" Width="718.2" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader3" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data3" Top="74.15" Width="718.2" Height="75.6"/>
+    <PageFooterBand Name="PageFooter3" Top="153.75" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
