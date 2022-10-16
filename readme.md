@@ -18,7 +18,7 @@ pDataSet.WriteXml(pFilename, XmlWriteMode.WriteSchema);
 ```
 - The `CreateDataSet` function can anything that output a `DataSet`, ideally from a database query.
 5. Download [FastReport Designer Community Edition]
-6. Extract the zip an run `Designer.exe`.
+6. Extract the zip and run `Designer.exe`.
 7. Create a new blank report.
 8. Add a new data source.
 9. Click "New Connection".
