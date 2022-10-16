@@ -2,7 +2,7 @@
 Minimal C# code to load a FastReport report template, populate a dataset, then export to PDF file.
 > Warning: FastReport is a commercial product with price starting at $499. 
 > They also offer a [free open source][FROSgit] edition but the PDF export feature is actually an image export. That is, the text of the rendered PDF can neither be selected nor copied.
-> For the purpose of creating a proof-of-concept product, I opted to use their [trial edition][FRT] instead of their open source edition.
+> For the purpose of creating a proof-of-concept project, I opted to use their [trial edition][FRT] instead of their open source edition.
 
 
 1. Open Visual Studio 2022 and create a console application.
